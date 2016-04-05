@@ -38,6 +38,6 @@ return [
     'facebook' => [
         'client_id' => '662973333845140',
         'client_secret' => '13d17525196b16c28df7c7b9addc7367',
-        'redirect' => 'http://ldoc.dev/oauth/callback',
+        'redirect' => env("FACEBOOK_REDIRECT")
     ]
 ];
