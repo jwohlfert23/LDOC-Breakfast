@@ -21,7 +21,7 @@
                 LDOC breakfast where all the proceeds go to charity.</p>
         </div>
     </div>
-    <div class="background" style="height: 400px; text-align: center; background-image: url('/img/franklin-st.jpg')">
+    <div class="background" style="height: 400px; text-align: center; background-image: url('/img/franklin-st.jpg')" id="menu">
         <div class="title">
             <h1 style="border-color: white">Menu</h1>
         </div>
