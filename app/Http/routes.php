@@ -10,7 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::controller('oauth', "OAuthController");
+Route::controller('/', "IndexController");
 
-Route::get('/', function () {
-    return view('home');
-});
