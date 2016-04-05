@@ -9,6 +9,11 @@
                 <i class="fa fa-check-circle-o text-success" style="font-size: 70px; margin-bottom: 20px"></i>
 
                 <h2>Thank you! See you on LDOC!</h2>
+
+            </div>
+            <div class="card-footer">
+                <a href="/#menu">&larr; Go back to menu</a>
+
             </div>
 
         </div>
