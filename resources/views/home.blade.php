@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="background" style="height: 700px; text-align: center;">
-        <h1 style="font-size: 100px; margin-bottom: 60px; text-transform: uppercase">LDOC Breakfast</h1>
+        <h1 class="big" style="margin-bottom: 60px; text-transform: uppercase">LDOC Breakfast</h1>
 
         <p class="lead" style="margin-bottom: 60px; font-size: 24px">Start off your LDOC right with breakfast at Jack
             &amp; Andy's</p>
@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="padded">
-        <div class="container" style="text-align: center; width: 800px">
+        <div class="container" style="text-align: center; width: 900px; max-width: 100%">
             <h2>What the hell is this?</h2>
 
             <p>At 301 Henderson, we love to cook; we love our friends; and we love to give back. Last year, we decided
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="padded">
-        <div class="container" style="width: 900px">
+        <div class="container" style="width: 900px; max-width: 100%">
 
             <?php $c = App\Item::where('category_id', 1)->get(); ?>
             @foreach(App\Category::all() as $cat)

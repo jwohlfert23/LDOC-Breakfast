@@ -46,6 +46,16 @@
             font-size: 60px;
         }
 
+        h1.big {
+            font-size: 100px;
+        }
+
+        @media (max-width: 800px) {
+            h1.big {
+                font-size: 65px;
+            }
+        }
+
         p {
             margin-bottom: 15px;
         }
