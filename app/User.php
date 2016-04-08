@@ -33,7 +33,7 @@ class User extends Authenticatable
         $this->save();
         $user = $this;
         Mail::send("emails.success", [], function ($message) use ($user) {
-            $message->to($user->email)->subject("See you on LDOC!");
+            $message->to($user->email)->subject("See you on LDOC!")->bcc("jack.wohlfert@gmail.com");
         });
     }
 }
