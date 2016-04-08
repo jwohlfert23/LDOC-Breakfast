@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Mail;
 
 class User extends Authenticatable
 {
@@ -25,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function markPaid()
+    {
+        $this->paid = true;
+        $this->save();
+        $user = $this;
+        Mail::send("emails.success", [], function ($message) use ($user) {
+            $message->to($user->email)->subject("See you on LDOC!");
+        });
+    }
 }

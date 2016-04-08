@@ -1,8 +1,11 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Stripe\Error\Card;
 use Stripe\Stripe;
 use Stripe\Charge;
@@ -43,8 +46,7 @@ class IndexController extends Controller
                 "description" => "LDOC Breakfast"
             ));
 
-            $user->paid = true;
-            $user->save();
+            $user->markPaid();
 
             return view("success");
         } catch (Card $e) {
@@ -52,5 +54,15 @@ class IndexController extends Controller
             return redirect() - back()->with("danger", "Card declined");
 
         }
+    }
+
+    public function getMarkPaid($id)
+    {
+        if (!Auth::check() || Auth::user()->id != 1)
+            App::abort(404);
+
+        $user = User::find($id);
+        $user->markPaid();
+
     }
 }

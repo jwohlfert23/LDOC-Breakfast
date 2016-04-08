@@ -15,8 +15,8 @@ return [
     |            "ses", "sparkpost", "log"
     |
     */
-
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => 'mailgun',
+    //'driver' => env('MAIL_DRIVER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
