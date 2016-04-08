@@ -62,6 +62,10 @@ class IndexController extends Controller
             App::abort(404);
 
         $user = User::find($id);
+
+        if($user->paid == 1)
+            return "Alread paid";
+        
         $user->markPaid();
 
     }
