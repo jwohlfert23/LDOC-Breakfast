@@ -28,7 +28,7 @@
                                 data-key="{{config('services.stripe.key')}}"
                                 data-image="/img/old-well.jpg"
                                 data-name="LDOC Breakfast"
-                                data-amount="1000"
+                                data-amount="4150"
                                 data-locale="auto"
                                 data-email="{{$user->email}}">
                         </script>
